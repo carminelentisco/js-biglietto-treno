@@ -18,7 +18,7 @@ var discounted ='';
 if (age < 18) {
     finalPrice += ((( km * priceKm ) * 20) / 100);
     discounted = 'Il biglietto è stato scontato del 20%';
-} else if (age > 65) {
+} else if (age > 64) {
     finalPrice += ((( km * priceKm ) * 40) / 100);
     discounted = 'Il biglietto è stato scontato del 40%';
 } else {
