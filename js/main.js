@@ -5,12 +5,10 @@ console.log(' -- Il file JavaScript main.js è stato inserito correttamente --')
 
 // VARIABILI 
 
-var km = parseInt( prompt('Inserisci i Km da percorrere : ') );
-console.log('Km Inseriti : ' + km);
-
+var name = prompt('Inserisci il tuo nome : ');
+var surname = prompt('Inserisci il tuo cognome : ');
 var age = parseInt( prompt('Inserisci la tua età : ') );
-console.log('Anni Inseriti : ' + age);
-
+var km = parseInt( prompt('Inserisci i Km da percorrere : ') );
 var priceKm = 0.21;
 var finalPrice = 0;
 
@@ -18,16 +16,20 @@ var finalPrice = 0;
 
 if (age < 18) {
     finalPrice += ((( km * priceKm ) * 20) / 100);
-    console.log(finalPrice);
 } else if (age > 65) {
     finalPrice += ((( km * priceKm ) * 40) / 100);
-    console.log(finalPrice);
 } else {
     finalPrice += km * priceKm
-    console.log(finalPrice);
 }
 
+// STAMPA SU PAGINA 
 
+// dati utente 
+document.getElementById('name').innerHTML = name;
+document.getElementById('surname').innerHTML = surname;
+document.getElementById('age').innerHTML = age;
 
+// dati destinazione
+document.getElementById('km').innerHTML = km;
 
-
+// dati prezzo
