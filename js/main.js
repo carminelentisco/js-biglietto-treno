@@ -11,15 +11,19 @@ var age = parseInt( prompt('Inserisci la tua età : ') );
 var km = parseInt( prompt('Inserisci i Km da percorrere : ') );
 var priceKm = 0.21;
 var finalPrice = 0;
+var discounted ='';
 
 // CALCOLO DEL PREZZO 
 
 if (age < 18) {
     finalPrice += ((( km * priceKm ) * 20) / 100);
+    discounted = 'Il biglietto è stato scontato del 20%';
 } else if (age > 65) {
     finalPrice += ((( km * priceKm ) * 40) / 100);
+    discounted = 'Il biglietto è stato scontato del 40%';
 } else {
-    finalPrice += km * priceKm
+    finalPrice += km * priceKm;
+    discounted = 'Nessuno';
 }
 
 // STAMPA SU PAGINA 
@@ -33,3 +37,5 @@ document.getElementById('age').innerHTML = age;
 document.getElementById('km').innerHTML = km;
 
 // dati prezzo
+document.getElementById('price').innerHTML = finalPrice;
+document.getElementById('discounted').innerHTML = discounted;
